@@ -152,7 +152,7 @@ class ReinforcementAgent(ValueEstimationAgent):
         if self.episodesSoFar >= self.numTraining:
             # Take off the training wheels
             self.epsilon = 0.0    # no exploration
-            self.alpha = 0.0      # no learning
+            self.alpha = 0.05      # 5% learning
 
     def isInTraining(self):
         return self.episodesSoFar < self.numTraining
